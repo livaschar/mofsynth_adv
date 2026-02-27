@@ -1,8 +1,8 @@
 import pytest
 import os
 import pickle
-import openpyxl
-from mofsynth_adv.modules.other import copy, load_objects, write_xlsx_results
+import csv
+from mofsynth_adv.modules.other import copy, load_objects, write_csv_results
 
 def test_copy(tmp_path):
     # Create source and destination directories
@@ -49,25 +49,25 @@ def test_load_objects(tmp_path):
     assert id_smiles_dict["BENZ01"] == "C1=CC=CC=C1"
     assert id_smiles_dict["C_METH02"] == "CO"
 
-def test_write_xlsx_results(tmp_path):
-    file_path = tmp_path / "results.xlsx"
+def test_write_csv_results(tmp_path):
+    file_path = tmp_path / "results.csv"
     dummy_results = [
         ["MOF_1", -100.1, -62810.0, 0.05, "L1", "C1...", -50.0, -50.1, "Success"],
         ["MOF_2", -200.2, -125620.0, 0.08, "L2", "C2...", -100.0, -100.2, "Failed"]
     ]
     
     # Run the writer
-    write_xlsx_results(dummy_results, str(file_path))
+    write_csv_results(dummy_results, str(file_path))
     
     # Verify the file exists
     assert file_path.exists()
     
     # Load it back to check content
-    wb = openpyxl.load_workbook(file_path)
-    sheet = wb.active
-    
-    # Check headers
-    assert sheet.cell(row=1, column=1).value == "NAME"
-    # Check first row of data
-    assert sheet.cell(row=2, column=1).value == "MOF_1"
-    assert sheet.cell(row=2, column=9).value == "Success"
+    with open(file_path, newline='') as f:
+        reader = list(csv.reader(f))
+        
+        # Check headers
+        assert reader[0][0] == "NAME"
+        # Check first row of data
+        assert reader[1][0] == "MOF_1"
+        assert reader[1][8] == "Success"

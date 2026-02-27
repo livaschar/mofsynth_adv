@@ -1,7 +1,7 @@
 import shutil
 import pickle
 import os
-import openpyxl
+import csv
 
 def copy(path1, path2, file_1, file_2 = None):
     if file_2 is None:
@@ -23,19 +23,11 @@ def load_objects(root_path):
     
     return cifs, linkers, id_smiles_dict
 
-def write_xlsx_results(results_list, results_xlsx_path):
-    
-    # Create a new workbook and select the active sheet
-    workbook = openpyxl.Workbook()
-    sheet = workbook.active
-
-    # Write headers
+def write_csv_results(results_list, results_csv_path):
     headers = ["NAME", "ENERGY_(OPT-SP)_[au]", "ENERGY_(OPT-SP)_[kcal/mol]", "RMSD_[A]", "LINKER_(CODE)", "LINKER_(SMILES)", "Linker_SinglePointEnergy_[au]", "Linker_OptEnergy_[au]", "Opt_status"]
-    sheet.append(headers)
-
-    # Write results
-    for result_row in results_list:
-        sheet.append(result_row)
-
-    # Save the workbook to the specified Excel file
-    workbook.save(results_xlsx_path)
+    
+    with open(results_csv_path, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(headers)
+        for result_row in results_list:
+            writer.writerow(result_row)

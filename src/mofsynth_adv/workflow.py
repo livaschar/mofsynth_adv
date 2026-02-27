@@ -7,7 +7,7 @@ from pathlib import Path
 from datetime import datetime
 
 from mofsynth_adv.core import MOF, Linkers
-from mofsynth_adv.modules.other import (copy, load_objects, write_xlsx_results)
+from mofsynth_adv.modules.other import (copy, load_objects, write_csv_results)
 
 
 class SynthesizabilityWorkflow:
@@ -20,7 +20,7 @@ class SynthesizabilityWorkflow:
         self.root_path = Path(root_path).resolve()
         self.synth_folder_path = self.root_path / "Synth_folder"
         self.linkers_path = self.synth_folder_path / "_Linkers_"
-        self.results_xlsx_path = self.root_path / "synth_results.xlsx"
+        self.results_csv_path = self.root_path / "synth_results.csv"
 
     def _log_time(self, start_time, end_time, function):
         """Writes start and end times into runtime.log."""
@@ -200,8 +200,8 @@ class SynthesizabilityWorkflow:
                    mof.opt_status]
             results.append(row)
 
-        write_xlsx_results(results, self.results_xlsx_path)
-        return self.results_xlsx_path
+        write_csv_results(results, self.results_csv_path)
+        return self.results_csv_path
 
 def run_synthesis(directory, function, calc_choice, opt_choice, time_limit, supercell_limit):
     engine = SynthesizabilityWorkflow(root_path=Path(directory).parent)

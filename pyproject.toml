@@ -33,7 +33,6 @@ dependencies = [
     "pymatgen>=2023.5.10",
     "tblite>=0.3.0",
     "sella",
-    "openpyxl>=3.1.2",
     "rmsd==1.5.1",
     "mace-torch",
     "torch"
