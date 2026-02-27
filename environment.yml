@@ -1,4 +1,4 @@
-name: mofsynth_adv_cli_env
+name: mofsynth_adv_env
 channels:
   - conda-forge
   - defaults
@@ -9,4 +9,5 @@ dependencies:
   - pip
   - pip:
       - -e .
+
 # - mofsynth_adv for pypi install
