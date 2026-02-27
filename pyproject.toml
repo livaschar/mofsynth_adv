@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[tool.setuptools.dynamic]
+version = {attr = "mofsynth_adv.__version__"}
+
+[project]
+name = "mofsynth_adv"
+dynamic = ["version"]
+authors = [
+  {name="Charalampos G. Livas", email="livas.charalampos@gmail.com"},
+]
+
+license = {text = "GPL-3.0-only"}
+description = "Package for MOF synthesizability evaluation."
+readme = "README.md"
+requires-python = ">=3.10"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+	"License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: POSIX :: Linux",
+]
+
+
+dependencies = [
+    "ase>=3.27.0",
+    "pymatgen>=2023.5.10",
+    "tblite>=0.3.0",
+    "sella",
+    "openpyxl>=3.1.2",
+    "rmsd==1.5.1",
+    "mace-torch",
+    "torch"
+]
+
+[project.urls]
+Homepage = "https://github.com/livaschar/mofsynth_adv"
+Issues = "https://github.com/livaschar/mofsynth_adv/issues"
+Documentation = "https://mofsynth_adv.readthedocs.io/en/latest/"
+
+[project.scripts]
+mofsynth_adv = "mofsynth_adv.__main__:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
