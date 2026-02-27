@@ -33,7 +33,7 @@ This new version is fully powered by open-source software, eliminating dependenc
 ✅ Why Upgrade?
 Whether you're screening thousands of MOFs or performing high-throughput synth-likelihood predictions, MOFSynth delivers the performance and flexibility modern computational chemists demand.
 
-Try it today — open source, faster, and ready for your next breakthrough.
+Open source, faster, and ready for your next breakthrough.
 
 ## What is MOFSynth?
 MOFSynth is a Python package for **MOF synthesizability evaluation**, with
@@ -131,6 +131,7 @@ Please consider citing [this publication](https://pubs.acs.org/doi/full/10.1021/
 ## 📑 License
 
 MOFSynth-ADV is released under the [GNU General Public License v3.0 only](https://spdx.org/licenses/GPL-3.0-only.html).
+
 
 
 
