@@ -1,4 +1,4 @@
-# MOFSynth-Adv
+# MOFSynth-ADV
 
 <h1 align="center">
   <!-- <img alt="Logo" src="https://github.com/livaschar/mofsynth_adv/blob/main/docs/source/images/synth_logo_v3_black.png" style="width: 500px;"/> -->
@@ -18,7 +18,7 @@
 
 ## 🔔 Release Note
 
-We are excited to announce the release of MOFSynth-Adv, a significant leap forward in our commitment to speed, accessibility, and scientific reproducibility.
+We are excited to announce the release of MOFSynth-ADV, a significant leap forward in our commitment to speed, accessibility, and scientific reproducibility.
 
 This new version is fully powered by open-source software, eliminating dependencies on proprietary packages and streamlining deployment across systems.
 
@@ -28,7 +28,7 @@ This new version is fully powered by open-source software, eliminating dependenc
 
 - **Global Config**: Set up your SLURM templates once with our new `~/.mofsynth/slurm_template.sh` approach and run anywhere.
 
-- **Open Science Ready**: All dependencies are now open source, making MOFSynth-Adv fully transparent and reproducible.
+- **Open Science Ready**: All dependencies are now open source, making MOFSynth-ADV fully transparent and reproducible.
 
 ✅ Why Upgrade?
 Whether you're screening thousands of MOFs or performing high-throughput synth-likelihood predictions, MOFSynth delivers the performance and flexibility modern computational chemists demand.
@@ -51,7 +51,7 @@ rather than on preparatory tasks.
 
 ## ⚙️  Installation
 
-Because MOFSynth-Adv relies on computational chemistry tools that require compiled Fortran and C libraries (like `tblite`), **it is strongly recommended to use Conda** to manage your environment. Using a standard Python `venv` with pure `pip` may result in missing Fortran runtime errors.
+Because MOFSynth-ADV relies on computational chemistry tools that require compiled Fortran and C libraries (like `tblite`), **it is strongly recommended to use Conda** to manage your environment. Using a standard Python `venv` with pure `pip` may result in missing Fortran runtime errors.
 
 ### Method 1: Using environment.yml (Recommended)
 
@@ -81,13 +81,13 @@ conda activate mofsynth_adv_cli_env
 # 2. Install tblite via conda-forge to ensure Fortran libraries are linked
 conda install -c conda-forge tblite tblite-python
 
-# 3. Install MOFSynth-Adv and the rest of the dependencies
+# 3. Install MOFSynth-ADV and the rest of the dependencies
 pip install mofsynth_adv
 ```
 
 ### Requires
 
-To run MOFSynth-Adv, the following modules and tools must be present in your system:
+To run MOFSynth-ADV, the following modules and tools must be present in your system:
 
 1. [**mofid**](https://github.com/snurr-group/mofid): A Python library for MOF identification and characterization.
 
@@ -133,7 +133,8 @@ Please consider citing [this publication](https://pubs.acs.org/doi/full/10.1021/
 
 ## 📑 License
 
-MOFSynth-Adv is released under the [GNU General Public License v3.0 only](https://spdx.org/licenses/GPL-3.0-only.html).
+MOFSynth-ADV is released under the [GNU General Public License v3.0 only](https://spdx.org/licenses/GPL-3.0-only.html).
+
 
 
 
