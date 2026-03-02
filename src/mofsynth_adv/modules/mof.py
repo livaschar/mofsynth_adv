@@ -4,7 +4,13 @@ from pathlib import Path
 from pymatgen.io.cif import CifWriter
 from pymatgen.core.structure import IStructure
 import signal
-from mofid.run_mofid import cif2mofid
+try:
+    from mofid.run_mofid import cif2mofid
+except ImportError:
+    raise ModuleNotFoundError(
+        "Please install the mofid module manually. "
+        "See https://mofsynth-adv.readthedocs.io/en/latest/mofid_help.html for help"
+    )
 
 import tempfile
 import shutil
@@ -297,3 +303,4 @@ class MOF:
             self.de = 0.0
             self.rmsd = 10000.0
             return False
+
