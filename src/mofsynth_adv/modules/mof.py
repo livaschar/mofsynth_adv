@@ -264,7 +264,7 @@ class MOF:
         self.linker_smiles = smiles
         
         # Determine paths
-        opt_path = Path("Synth_evaluations") / "single" / self.linker_smiles / self.name
+        opt_path = Path("Synth_evaluations") / self.name
         opt_path.mkdir(parents=True, exist_ok=True)
         
         # Write geometry
@@ -303,4 +303,5 @@ class MOF:
             self.de = 0.0
             self.rmsd = 10000.0
             return False
+
 
