@@ -32,7 +32,7 @@ dependencies = [
     "ase>=3.27.0",
     "pymatgen>=2023.5.10",
     "tblite>=0.3.0",
-    "sella",
+    "sella>=2.3.5",
     "rmsd==1.5.1",
     "mace-torch",
     "torch"
@@ -47,4 +47,5 @@ Documentation = "https://mofsynth_adv.readthedocs.io/en/latest/"
 mofsynth_adv = "mofsynth_adv.__main__:main"
 
 [tool.pytest.ini_options]
+
 pythonpath = ["src"]
