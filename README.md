@@ -59,7 +59,7 @@ If you are installing from the source repository, we provide an environment file
 
 ```sh
 # Clone the repository
-git clone [https://github.com/livaschar/mofsynth_adv.git](https://github.com/livaschar/mofsynth_adv.git)
+git clone https://github.com/livaschar/mofsynth_adv.git
 cd mofsynth_adv
 
 # Create the environment and install all dependencies
@@ -133,6 +133,7 @@ Please consider citing [this publication](https://pubs.acs.org/doi/full/10.1021/
 ## 📑 License
 
 MOFSynth-ADV is released under the [GNU General Public License v3.0 only](https://spdx.org/licenses/GPL-3.0-only.html).
+
 
 
 
