@@ -99,7 +99,7 @@ Easy to use [Web version](https://mofsynth.website) of the tool.
 
 Check the [tutorial](https://mofsynth-adv.readthedocs.io/en/latest/tutorial.html).
 
-Also check the [examples](https://github.com/livaschar/mofsynth_adv/examples) folder for ready to use python scripts.
+Also check the [examples](https://github.com/livaschar/mofsynth_adv/tree/main/examples) folder for ready to use python scripts.
 
 ## :warning: Problems?
 
@@ -133,6 +133,7 @@ Please consider citing [this publication](https://pubs.acs.org/doi/full/10.1021/
 ## 📑 License
 
 MOFSynth-ADV is released under the [GNU General Public License v3.0 only](https://spdx.org/licenses/GPL-3.0-only.html).
+
 
 
 
