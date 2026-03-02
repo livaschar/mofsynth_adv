@@ -19,7 +19,7 @@ Follow these steps to clone the repository:
     git clone -b v1.1.0 https://github.com/snurr-group/mofid.git
     
 
-Editing the Source Code
+Editing the Source Code (Not always needed, depends on the system)
 -----------------------
 
 Make the following modification to the source code:
