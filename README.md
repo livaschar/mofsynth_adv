@@ -91,6 +91,8 @@ To run MOFSynth-ADV, the following modules and tools must be present in your sys
 
 1. [**mofid**](https://github.com/snurr-group/mofid): A Python library for MOF identification and characterization.
 
+Make sure to check [installation document](https://mofsynth-adv.readthedocs.io/en/latest/mofid_help.html) if you encounter any problems.
+
 ## 💻 Browser-Based MOFSynth
 
 Easy to use [Web version](https://mofsynth.website) of the tool.
@@ -133,6 +135,7 @@ Please consider citing [this publication](https://pubs.acs.org/doi/full/10.1021/
 ## 📑 License
 
 MOFSynth-ADV is released under the [GNU General Public License v3.0 only](https://spdx.org/licenses/GPL-3.0-only.html).
+
 
 
 
