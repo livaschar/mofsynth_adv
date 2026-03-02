@@ -30,6 +30,18 @@ extensions = [
         'sphinx_issues',
         ]
 
+# Prevent RTD from needing to install heavy libraries
+autodoc_mock_imports = [
+    'torch',
+    'mace',       # Note: Use the import name, not necessarily the PyPI name
+    'mace_torch', # (Include whatever actual import statements you use for mace)
+    'pymatgen',
+    'ase',
+    'tblite',
+    'sella',
+    'rmsd'
+]
+
 templates_path = ['_templates']
 exclude_patterns = ['modules.rst']
 
@@ -54,3 +66,4 @@ issues_commit_uri = "https://github.com/{group}/{project}/commit/{commit}"
 issues_commit_prefix = "@"
 issues_user_uri = "https://github.com/{user}"
 issues_user_prefix = "@"
+
