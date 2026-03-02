@@ -66,7 +66,7 @@ cd mofsynth_adv
 conda env create -f environment.yml
 
 # Activate the environment
-conda activate mofsynth_adv_cli_env
+conda activate mofsynth_adv_env
 ```
 
 ### Method 2: Manual Installation via Conda + Pip
@@ -131,6 +131,7 @@ Please consider citing [this publication](https://pubs.acs.org/doi/full/10.1021/
 ## 📑 License
 
 MOFSynth-ADV is released under the [GNU General Public License v3.0 only](https://spdx.org/licenses/GPL-3.0-only.html).
+
 
 
 
