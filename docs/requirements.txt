@@ -44,7 +44,6 @@ rmsd==1.5.1
 mace-torch
 torch
 sella
-ase-openff
 Sphinx
 sphinx-argparse
 sphinx-code-tabs
