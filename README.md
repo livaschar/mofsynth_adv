@@ -1,4 +1,4 @@
-# MOFSynth-ADV
+# MOFSynth-Advanced
 
 <h1 align="center">
   <!-- <img alt="Logo" src="https://github.com/livaschar/mofsynth_adv/blob/main/docs/source/images/synth_logo_v3_black.png" style="width: 500px;"/> -->
@@ -131,6 +131,7 @@ Please consider citing [this publication](https://pubs.acs.org/doi/full/10.1021/
 ## 📑 License
 
 MOFSynth-ADV is released under the [GNU General Public License v3.0 only](https://spdx.org/licenses/GPL-3.0-only.html).
+
 
 
 
