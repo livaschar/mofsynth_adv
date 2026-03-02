@@ -75,8 +75,8 @@ If you are installing directly from PyPI, please ensure you install tblite via c
 
 ```sh
 # 1. Create and activate a new conda environment
-conda create -n mmofsynth_adv_cli_env python=3.13
-conda activate mofsynth_adv_cli_env
+conda create -n mmofsynth_adv_env python=3.13
+conda activate mofsynth_adv_env
 
 # 2. Install tblite via conda-forge to ensure Fortran libraries are linked
 conda install -c conda-forge tblite tblite-python
@@ -131,6 +131,7 @@ Please consider citing [this publication](https://pubs.acs.org/doi/full/10.1021/
 ## 📑 License
 
 MOFSynth-ADV is released under the [GNU General Public License v3.0 only](https://spdx.org/licenses/GPL-3.0-only.html).
+
 
 
 
