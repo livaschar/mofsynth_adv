@@ -16,7 +16,8 @@ Follow these steps to clone the repository:
     
     mkdir mofid_module
     cd mofid_module
-    git clone -b v1.1.0 https://github.com/snurr-group/mofid.git
+    git clone https://github.com/snurr-group/mofid.git
+    cd mofid
     
 
 Editing the Source Code (Not always needed, depends on the system)
@@ -26,7 +27,6 @@ Make the following modification to the source code:
 
 .. code-block:: shell
 
-    cd mofid
     vim openbabel/include/openbabel/obutil.h
 
 Write **#include <ctime>** in line 47. Make sure to save the file before exit.
@@ -40,5 +40,4 @@ Complete the installation with these commands:
 
     make init
     python3 set_paths.py
-    source /path/to/venvir_name/bin/activate
     pip install .
