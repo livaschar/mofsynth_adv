@@ -3,6 +3,14 @@
 |:rocket:| Tutorial
 ===================
 
+MOFSynth-ADV via Python
+----------
+
+If you want to run MOFSynth-ADV via Python, check the `examples folder <https://github.com/livaschar/mofsynth_adv/tree/main/examples>`_.
+
+MOFSynth-ADV via CLI
+----------
+
 As stated in :ref:`advantages`, all you need is a ``.cif`` file!
 
 If you don't have one |:point_right:| :download:`example.cif<down/example.cif>`
@@ -53,3 +61,5 @@ Once all linker optimizations have completed, compile the final results:
         $ mofsynth_adv report cifs_folder
 
 Hurray! An **.xlsx file** containing the final synthesizability evaluation results will be created in your working directory.
+
+
