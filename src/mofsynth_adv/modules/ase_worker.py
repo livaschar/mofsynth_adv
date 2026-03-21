@@ -1,22 +1,8 @@
 import sys
 from ase.io import read, write
 
-def get_optimizer(name, atoms):
-    name = name.lower()
-    if name == "sella":
-        from sella import Sella
-        return Sella(atoms)
-    elif name == "fire":
-        from ase.optimize import FIRE
-        return FIRE(atoms)
-    elif name == "lbfgs":
-        from ase.optimize import LBFGS
-        return LBFGS(atoms)
-    else:
-        from ase.optimize import BFGS
-        return BFGS(atoms)
-
 def get_calculator(name):
+    # CUSTOM USERS: Add your preferred ASE calculator (e.g., UMA, eSEN) here.
     name = name.lower()
     if name == "xtb":
         try:
@@ -55,6 +41,22 @@ def get_calculator(name):
     else:
         print(f"Unknown calculator: {name}. Cannot proceed without a valid backend.")
         sys.exit(1)
+
+
+def get_optimizer(name, atoms):
+    name = name.lower()
+    if name == "sella":
+        from sella import Sella
+        return Sella(atoms)
+    elif name == "fire":
+        from ase.optimize import FIRE
+        return FIRE(atoms)
+    elif name == "lbfgs":
+        from ase.optimize import LBFGS
+        return LBFGS(atoms)
+    else:
+        from ase.optimize import BFGS
+        return BFGS(atoms)
 
 def run_calculation(xyz_path, out_dir, calc_name, opt_name):
     atoms = read(xyz_path)
