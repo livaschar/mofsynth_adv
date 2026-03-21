@@ -3,6 +3,7 @@
 <h1 align="center">
   <!-- <img alt="Logo" src="https://github.com/livaschar/mofsynth_adv/blob/main/docs/source/images/synth_logo_v3_black.png" style="width: 500px;"/> -->
   <!-- <img alt="Logo" src="https://github.com/livaschar/mofsynth_adv/blob/main/docs/source/images/synth_image_v3.png" style="width: 500px;"/> -->
+  <img alt="Logo" src="https://github.com/livaschar/mofsynth_adv/blob/main/docs/source/images/mofsynth_logo.png" style="width: 500px;"/>
 </h1>
 
 <h4 align="center">
