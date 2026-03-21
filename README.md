@@ -132,6 +132,23 @@ Please consider citing [this publication](https://pubs.acs.org/doi/full/10.1021/
 
 </details>
 
+## 🛠️ Developer Information & Contributions
+We welcome contributions to expand the capabilities of MOFSynth-ADV! Whether you are fixing bugs, adding new features, or integrating new physics engines, your help is appreciated.
+
+To add a new model:
+ 1. Open src/mofsynth_adv/modules/ase_worker.py.
+ 2. Find the get_calculator(name) function.
+ 3. Add a new elif block to initialize your desired ASE calculator.
+ 4. Ensure any additional Python dependencies (like fairchem-core for UMA) are installed in your environment.
+
+Submitting Changes
+ 
+ 1. Fork the repository.
+ 2. Create a feature branch (git checkout -b feature/NewCalculator).
+ 3. Commit your changes.
+ 4. Push to the branch and open a Pull Request
+
+
 ## 📑 License
 
 MOFSynth-ADV is released under the [GNU General Public License v3.0 only](https://spdx.org/licenses/GPL-3.0-only.html).
