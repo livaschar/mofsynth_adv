@@ -1,7 +1,7 @@
 .. MOFSynth-ADV documentation master file, created by
    sphinx-quickstart on Thu Jul 24 11:20:11 2025.
 
-.. image:: images/synth_logo_v3_black.png
+.. image:: images/mofsynth_logo.png
    :width: 600
    :align: center
 
