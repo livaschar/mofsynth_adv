@@ -77,7 +77,7 @@ class SynthesizabilityWorkflow:
         for cif_path in cifs:
             print(f'\n - \033[1;34mMOF under study: {cif_path.stem}\033[m -')
             
-            # Use the new API
+            # New API
             try:
                 mof = MOF.from_cif(str(cif_path))
             except ValueError:
@@ -100,11 +100,9 @@ class SynthesizabilityWorkflow:
             mof.linker_smiles = smiles_id_dict[smiles]
             mof_instances.append(mof)
             
-            # Setup linker tracking
+            # linker tracking
             opt_path = self.linkers_path / mof.linker_smiles / mof.name
             linker = Linkers(smiles_code=mof.linker_smiles, mof_name=mof.name, opt_path=opt_path)
-            
-            # Ensure the geometry file is written correctly for the optimizer
             if xyz:
                 linker.opt_path.mkdir(parents=True, exist_ok=True)
                 with open(linker.opt_path / "linker.xyz", "w") as f:
@@ -112,12 +110,12 @@ class SynthesizabilityWorkflow:
                     
             linker_instances.append(linker)
 
-        # Dispatch Optimizations
+        # Opt
         for linker in linker_instances:
             print(f'\n - \033[1;34mLinker under optimization study: {linker.smiles_code}, of {linker.mof_name}\033[m -')
             linker.optimize(calc_choice=calc_choice, opt_choice=opt_choice, rerun=False)
 
-        # Save Checkpoint States
+        # Checkpoint
         with open(self.root_path / 'cifs.pkl', 'wb') as file:
             pickle.dump(mof_instances, file)
         with open(self.root_path / 'linkers.pkl', 'wb') as file:
@@ -183,7 +181,6 @@ class SynthesizabilityWorkflow:
                 
                 mof.de = float(best_energy) - float(linker.sp_energy)
                 
-                # Assume final.xyz is at the linker path for now in this pipeline logic
                 sp_file = linker.opt_path / "linker.xyz" 
                 opt_file = best_path / "final.xyz" 
                 
