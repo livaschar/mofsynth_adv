@@ -201,5 +201,6 @@ class SynthesizabilityWorkflow:
         return self.results_csv_path
 
 def run_synthesis(directory, function, calc_choice, opt_choice, time_limit, supercell_limit):
-    engine = SynthesizabilityWorkflow(root_path=Path(directory).parent)
+    # engine = SynthesizabilityWorkflow(root_path=Path(directory).parent)
+    engine = SynthesizabilityWorkflow(root_path=Path.cwd())
     engine.run(directory, function, calc_choice, opt_choice, time_limit, supercell_limit)
