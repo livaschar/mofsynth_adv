@@ -60,6 +60,6 @@ Once all linker optimizations have completed, compile the final results:
 
         $ mofsynth_adv report cifs_folder
 
-Hurray! An **.xlsx file** containing the final synthesizability evaluation results will be created in your working directory.
+Hurray! A **.csv file** containing the final synthesizability evaluation results will be created in your working directory.
 
 
