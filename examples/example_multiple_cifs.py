@@ -51,7 +51,7 @@ def run_high_throughput_batch(cif_directory: str):
 
 if __name__ == "__main__":
     # Provide the path to a folder containing multiple .cif files
-    sample_dir = "./one/cifs"
+    sample_dir = "path/to/your/cif_folder"
     
     if Path(sample_dir).exists():
         run_high_throughput_batch(sample_dir)
