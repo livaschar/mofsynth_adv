@@ -63,18 +63,17 @@ def run_calculation(xyz_path, out_dir, calc_name, opt_name):
     atoms.calc = get_calculator(calc_name)
 
     try:
-        # 1. Initial Energy
+        #Initial Energy
         initial_energy = atoms.get_potential_energy()
         
-        # 2. Optimization
+        # Optimization
         dyn = get_optimizer(opt_name, atoms)
         # The convergence criterion is that the force on all individual atoms should be less than fmax
         dyn.run(fmax=0.05)
         
-        # 3. Final Energy
+        # Final Energy
         final_energy = atoms.get_potential_energy()
         
-        # 4. Write Files
         write(f"{out_dir}/final.xyz", atoms)
         with open(f"{out_dir}/converged.out", "w") as f:
             f.write(f"Initial Energy: {initial_energy * 23.06:.6f} kcal/mol\n")
