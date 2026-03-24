@@ -1,18 +1,18 @@
 from mofsynth_adv import MOF
 
-# 1. Load the MOF directly from the CIF file
-cif_path = "tests/data/sample.cif" 
+# Load the MOF directly from the CIF file
+cif_path = "/path/to/your/file_name.cif" 
 
 try:
     print(f"Loading {cif_path}...")
     mof = MOF.from_cif(cif_path)
     
-    # 2. Evaluate synthesizability in a single command!
+    # Evaluate synthesizability in a single command
     # This automatically extracts linkers, builds the SLURM paths, 
     # runs the optimization calculator, and calculates DE and RMSD.
     success = mof.evaluate_synthesizability(calc_choice="xtb", opt_choice="lbfgs")
-    
-    # 3. View the results
+
+    # View the results
     print("\n--- Final Results ---")
     if success:
         print(f"Convergence Status: {mof.opt_status}")
@@ -24,4 +24,3 @@ try:
 
 except Exception as e:
     print(f"An error occurred: {e}")
-
