@@ -59,12 +59,11 @@ class Linkers:
         xyz_path = working_dir / "linker.xyz"
         job_sh = working_dir / "submit_opt.sh"
 
-        # 2. Find the worker script
+        #worker script
         worker_path = Path(mofsynth_adv.__file__).parent / "modules" / "ase_worker.py"
-        # 3. Find the Python interpreter
         python_exe = sys.executable
 
-        # 1. Create or read the Slurm Script Template from the user's home directory
+        # Slurm Script Template from the user's home directory
         mofsynth_dir = Path.home() / ".mofsynth"
         mofsynth_dir.mkdir(parents=True, exist_ok=True)
         template_path = mofsynth_dir / "slurm_template.sh"
