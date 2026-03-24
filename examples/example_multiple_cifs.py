@@ -8,13 +8,13 @@ def run_high_throughput_batch(cif_directory: str):
         return
 
     # Initialize the Workflow engine
-    # By default, it creates an output folder named 'Synth_folder' at the root of the provided directory
-    root_workspace = input_dir.parent
+    # create an output folder named 'Synth_folder' at the current working directory
+    root_workspace = Path.cwd()
     workflow = SynthesizabilityWorkflow(root_path=root_workspace)
     
     print(f"--- Starting High-Throughput Job on: {input_dir} ---")
     
-    # 1. Execute Fragmentation & Quantum Optimizations 
+    # Execute Fragmentation & Quantum Optimizations 
     # This automatically processes all .cif files inside `cif_directory`
     # It identifies unique linkers and avoids computing duplicate fragments across different MOFs
     workflow.execute(
@@ -25,7 +25,7 @@ def run_high_throughput_batch(cif_directory: str):
         supercell_limit=None # Optional spatial limit for supercell size bounds
     )
     
-    # 2. Verify statuses (Wait for asynchronous optimizations to finish)
+    # Verify statuses (Wait for asynchronous optimizations to finish)
     import time
     print("\n--- Waiting for Optimizations to Complete ---")
     print("This may take a while depending on the calculator and cluster availability.")
@@ -44,14 +44,14 @@ def run_high_throughput_batch(cif_directory: str):
     print(f"Successfully Converged Linkers: {len(converged)}")
     print(f"Failed to Converge: {len(not_converged)}")
     
-    # 3. Generate final report (synth_results.xlsx)
+    # Generate final report (synth_results.csv)
     print("\n--- Generating Report ---")
     results_path = workflow.report()
     print(f"Job Complete! Final summary written to: {results_path}")
 
 if __name__ == "__main__":
     # Provide the path to a folder containing multiple .cif files
-    sample_dir = "my_cif_batch_folder"
+    sample_dir = "./one/cifs"
     
     if Path(sample_dir).exists():
         run_high_throughput_batch(sample_dir)
