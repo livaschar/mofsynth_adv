@@ -38,6 +38,18 @@ def get_calculator(name):
                 "\n\n[MACE NOT FOUND] To use Machine Learning potentials, "
                 "please install the optional dependencies:\n"
                 "pip install mofsynth_adv[ml]\n")
+    # elif name == "uma":
+    #     try:
+    #         from fairchem.core import pretrained_mlip, FAIRChemCalculator
+    #         import torch
+    #         predictor = pretrained_mlip.get_predict_unit("uma-s-1p2", device="cuda")
+    #         # 'odac' task (specifically for MOFs), 'omol' for pure organic molecules, 'omat' for inorganic bulk
+    #         return FAIRChemCalculator(predictor, task_name="odac")
+    #     except ImportError:
+    #         raise ImportError(
+    #             "\n\n[FAIRCHEM NOT FOUND] To use UMA potentials, please run:\n"
+    #             "pip install fairchem-core\n"
+    #             "And ensure you have logged in to Hugging Face: huggingface-cli login\n")
     else:
         print(f"Unknown calculator: {name}. Cannot proceed without a valid backend.")
         sys.exit(1)
